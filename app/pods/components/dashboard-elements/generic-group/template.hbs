@@ -1,0 +1,9 @@
+<p>dashboard-element/generic-group</p>
+<div>
+{{yield (hash
+  componentType = @type
+  newType=this.newType
+)}}
+{{log "type1" this.newType.type1}}
+</div>
+{{!-- <div>{{yield}}</div> --}}

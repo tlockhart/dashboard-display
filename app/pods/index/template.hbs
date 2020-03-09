@@ -1,0 +1,14 @@
+
+{{!-- </DashboardElements::InstallationGroup>
+{{/each}} --}}
+<h1> This is Example 5: Yield a new component
+  reference!</h1>
+{{#each @model as |route_post|}}
+<DashboardElements::ElementSelector
+  @type={{route_post.type}}
+  @element={{route_post.element}}
+as |deWrap|>
+  {{component deWrap.wrapper}}
+  {{log "wrapper" deWrap.wrapper}}
+</DashboardElements::ElementSelector>
+{{/each}}
